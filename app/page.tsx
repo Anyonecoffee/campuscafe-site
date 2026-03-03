@@ -48,8 +48,9 @@ function loadConfig() {
   return DEFAULT_CONFIG;
 }
 
-function saveConfig(cfg: any) {
+function saveConfig(cfg: unknown) {
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify(cfg)); } catch {}
+}}
 }
 
 // ─────────────────────────────────────────────
