@@ -36,7 +36,7 @@ const DEFAULT_CONFIG = {
     ],
   },
 };
-
+type AppConfig = typeof DEFAULT_CONFIG;
 const STORAGE_KEY = "torref_config_v1";
 const ADMIN_PIN = "1234";
 
@@ -48,7 +48,7 @@ function loadConfig() {
   return DEFAULT_CONFIG;
 }
 
-function saveConfig(cfg: unknown) {
+function saveConfig(cfg: AppConfig) {
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify(cfg)); } catch {}
 }}
 }
