@@ -48,7 +48,7 @@ function loadConfig() {
   return DEFAULT_CONFIG;
 }
 
-function saveConfig(cfg) {
+function saveConfig(cfg: any) {
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify(cfg)); } catch {}
 }
 
